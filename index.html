@@ -10,25 +10,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1 class="header">Accessible Components: A Case Study</h1>
+  <div class="vl"></div>
+  <h1 class="header">Dropdown Menus:<br>An Accessibility Evaluation</h1>
     <nav class = "sidebar">
         <ul>
-            <li><a href="#introduction">1</a></li>
-            <li><a href="#problem">2</a></li>
-            <li><a href="#solution">3</a></li>
-            <li><a href="#impact">4</a></li>
-            <li><a href="#conclusion">5</a></li>
+            <li><a href="#input">1</a></li>
+            <li><a href="#solution">2</a></li>
+            <li><a href="#impact">3</a></li>
+            <li><a href="#conclusion">4</a></li>
         </ul>
     </nav>    
   <main>
-      <section id="introduction">
-          <h2>Introduction</h2>
-          <p>[Introduction text goes here]</p>
-      </section>
+      <div class="info">
+          <p>The case study below focuses on the accessibility of dropdown menus, aiming to improve them for all users, including those using keyboard, mouse, touchscreen, or screen readers. By evaluating - and potentially reworking - current implementations for better, the goal is to enhance usability & accessiblity without sacrificing function.</p>
+      </div>
 
-      <section id="problem">
-          <h2>The Problem</h2>
-          <p>[Description of accessibility issues]</p>
+      <section id="input">
+          <h2>INPUT</h2>
+          <div class="input-all"> 
+          <div class="input-imgs">
+            <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse">
+            <img src="images/far_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app">
+          </div>
+          <div class="input-imgs">
+            <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse">
+            <img src="images/far_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app">
+          </div>          
+          <div class="input-imgs">
+            <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse">
+            <img src="images/far_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app">
+          </div>
+        </div>
+          <table>
+            <tr>
+                <th></th>
+                <th><i>FARFETCH (dropdown menu for clothing item categories)</i></th>
+                <th>Application B</th>
+                <th>Application C</th>
+            </tr>
+            <tr>
+                <td>Mouse/Touchpad</td>
+                <td>Clicking on any of its elements leads to a subpage specific to that element, and closes the dropdown; which item has been chosen is indistinguishable once redirected (all text has the same color). Hovering on any of its elements instead lightens up the names of the other items, and expands a submenu specific to the hovered-over item. Moving the mouse away collapses the dropdown menu. Hovering over an element within the submenu underlines its name; clicking leads to an associated page. 
+                  Can select and copy any text (both in the navbar and in the collapsed dropdown).
+                  Learnable: hovering over a category opens the dropdown, clicking an item closes the menu & navigates to a new page (intuitive & easy to pick up). Memorable: consistent layout & visual feedback (underlines in the dropdown on hover; darker color of the navbar item once chosen). Efficient: hovering, can quickly preview & select options without extra clicks.</td>
+                <td>[brief notes, bullet points]</td>
+                <td>[brief notes, bullet points]</td>
+            </tr>
+            <tr>
+                <td>Keyboard</td>
+                <td>Limited support. Using tab, can navigate into the menu, but can't focus on any option other than "new in" (moves to the far-right search bar on second 'tab' press). To open the dropdown (works only for "new in"), must press 'enter' or 'space'; to close, 'escape'. Learnable: can move through the list with keyboard arrows or via 'tab'. Can't choose a general item (f.e., 'new in') & navigate to its page - enter will only open the dropdown menu, from which one must choose a subcategory (can select via enter, move via tab). Can distinguish which category has been chosen, as a blue border appears around an item on tab. Can't select specific text, only all (command+a). Can't navigate back to the main page without using the browser's back button.</td>
+                <td>[brief notes, bullet points]</td>
+                <td>[brief notes, bullet points]</td>
+            </tr>
+            <tr>
+                <td>Touch</td>
+                <td>Dropdown menu expands from the bottom & covers the entire screen except for the menu items. Upon clicking 'brands', a submenu opens, where one can either navigate to a specific brand's subpage (by clicking on 'your go-to brands'), or go to the full list of brands available (by clicking on brands a-z). It's then possible to choose multiple brands - a checkmark appears on the right of the item. On long touch, the brand changes background color in the list into light grey. Can scroll and refine brands (into those selling men's, women's, kid's clothes). Can't select text on press & hold. To confirm selection, must click 'shop (x) brands' which will automatically redirect to a page with items of the chosen brands. Inefficient: can't preview items, must click on a menu item to see the subcategories. Memorable: order of the elements in the navbar. Learnable: checkmarks on the far right of each element, the menu still being visible on the bottom once the dropdown expands (can tell which element has been chosen)</td>
+                <td>[brief notes, bullet points]</td>
+                <td>[brief notes, bullet points]</td>
+            </tr>
+        </table>
       </section>
       
       <section id="solution">
@@ -45,10 +85,10 @@
           <h2>Conclusion</h2>
           <p>[Final thoughts]</p>
       </section>
-  </main>
   
   <footer>
       <p>&copy; 2025 Accessible Web Design</p>
   </footer>
+</main>
 </body>
 </html>

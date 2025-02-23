@@ -6,16 +6,15 @@ body {
   text-align:right;
 }
 
-/* Sidebar */
+/* ------------------------------- Sidebar ------------------------------------------ */
 .sidebar {
   position: fixed; /* stays in place */
-  top: 0;
-  left: 0; 
   height: 100vh; /* Make it span the entire height of the page */
   width: 100px; /* Sidebar width */
   z-index: 1000;
   display: flex; /* affects only elts inside */
   flex-direction: column; /* Ensure the list items stack vertically */
+  align-items: flex-end;
 }
 
 .sidebar ul {
@@ -34,29 +33,106 @@ body {
   display: block;
 }
 
-
+/* ------------------------------- Main ------------------------------------------ */
 main {
-  margin-left: 120px; /* Adjust content to the right of the sidebar */
-  padding: 0px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-section {
-  padding: 60px 20px;
-  margin-bottom: 60px;
+.vl {
+  position: fixed; 
+  border-left: 1px solid rgb(0, 0, 0);
+  margin-left: 160px;
+  height: 100vh; 
 }
 
-section h2 {
-  font-size: 2rem;
-}
 
 .header {
   position: relative; 
-  width: 100%;
+  width: 98%;
   height: auto;
+  margin: 0px;
   z-index: 1; 
   font-family: "Instrument Sans", sans-serif;
   font-weight: 440;
   font-style: normal;
   font-size: 100px; 
   display: block; 
+  line-height: 100px;
+  letter-spacing: -3px;
+  padding: 10px; 
+}
+
+section {
+  width: 85vw; 
+  margin-left: 200px;
+  margin-bottom: 20px; 
+}
+
+section h2 {
+  font-size: 50px; 
+  font-style: italic; 
+  margin: 0; 
+  margin-block: 0;
+  font-weight: 440;
+  line-height: 100px;
+  letter-spacing: -3px;
+  text-align: center;
+}
+
+.info {
+  text-align: justify;
+  text-align-last: right;
+  width: 79%; 
+  margin-right:30px;
+  margin-left: auto;
+}
+
+.input-all {
+  display:flex;
+  flex-direction: row; 
+  justify-content: left;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+.input-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+.input-imgs img {
+  width: 600px;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+}
+
+/* ------------------------------- Table ------------------------------------------ */
+
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+th, td {
+  border: 0.5px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
 }
