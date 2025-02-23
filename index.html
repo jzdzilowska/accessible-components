@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="vl"></div>
+  <div id="rectangle"></div>
   <h1 class="header">Dropdown Menus:<br>An Accessibility Evaluation</h1>
     <nav class = "sidebar">
         <ul>
             <li><a href="#input">1</a></li>
-            <li><a href="#solution">2</a></li>
+            <li><a href="#output">2</a></li>
             <li><a href="#impact">3</a></li>
             <li><a href="#conclusion">4</a></li>
         </ul>
@@ -25,7 +25,7 @@
           <p>The case study below focuses on the accessibility of dropdown menus, aiming to improve them for all users, including those using keyboard, mouse, touchscreen, or screen readers. By evaluating - and potentially reworking - current implementations for better, the goal is to enhance usability & accessiblity without sacrificing function.</p>
       </div>
       <section id="input">
-          <h2>INPUT</h2>
+          <h2><i>INPUT</i></h2>
           <div class="input-all"> 
           <div class="input-imgs">
             <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse" style="margin-left: 40px;">
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td>Mouse/Touchpad</td>
-                <td>Clicking on any of its elements leads to a subpage specific to that element, and closes the dropdown; which item has been chosen is indistinguishable once redirected (all text has the same color). Hovering on any of its elements instead lightens up the names of the other items, and expands a submenu specific to the hovered-over item. Moving the mouse away collapses the dropdown menu. Hovering over an element within the submenu underlines its name; clicking leads to an associated page. 
+                <td>Clicking on any of its elements leads to a subpage specific to that element, and closes the dropdown; which item has been chosen is indistinguishable once redirected (all text in the menu has the same color). Hovering on any of its elements instead lightens up the names of the other items, and expands a submenu specific to the hovered-over item. Moving the mouse away collapses the dropdown menu. Hovering over an element within the submenu underlines its name; clicking leads to an associated page. 
                   Can select and copy any text (both in the navbar and in the collapsed dropdown).
                   Learnable: hovering over a category opens the dropdown, clicking an item closes the menu & navigates to a new page (intuitive & easy to pick up). Memorable: consistent layout & visual feedback (underlines in the dropdown on hover; darker color of the navbar item once chosen). Efficient: hovering, can quickly preview & select options without extra clicks.</td>
                 <td>Clicking on the ‘choose a board’ section opens up a dropdown menu with user’s boards. Learnable: those with sections have a side arrow on their far right, and a hovered-over board will have a gray background with its name displayed as a popup. Efficient: can look up a board with the search bar (scrolling possible, but takes time with many boards). Memorable: all lists are alphabetical, and the layout of the menu remains the same (search on top, then boards). Clicking directly on a board without subsections selects it and collapses the menu. Clicking on a board with sections opens a secondary list of sections. Clicking on a section selects it and closes the dropdown.
@@ -59,7 +59,7 @@
             </tr>
             <tr>
                 <td>Keyboard</td>
-                <td>Limited support. Using tab, can navigate into the menu, but can't focus on any option other than "new in" (moves to the far-right search bar on second 'tab' press). To open the dropdown (works only for "new in"), must press 'enter' or 'space'; to close, 'escape'. Learnable: can move through the list with keyboard arrows or via 'tab'. Can't choose a general item (f.e., 'new in') & navigate to its page - enter will only open the dropdown menu, from which one must choose a subcategory (can select via enter, move via tab). Can distinguish which category has been chosen, as a blue border appears around an item on tab. Can't select specific text, only all (command+a). Can't navigate back to the main page without using the browser's back button.</td>
+                <td>Limited support. Using tab, can navigate into the menu, but can't focus on any option other than "new in" (moves to the far-right search bar on second 'tab' press). To open the dropdown (works only for "new in"), must press 'enter' or 'space'; to close, 'escape'. Learnable: can move through the list with keyboard arrows or via 'tab'. Can't choose a general item (f.e., 'new in') & navigate to its page right away - enter will only open the dropdown menu, from which one must choose a subcategory (can select via enter, move via tab). Can select categories other than 'new in' by moving left/right through the menu with keyboard arrows. Can't select specific text, only all (command+a). Can't navigate back to the main page without using the browser's back button.</td>
                 <td>Using tab, can navigate into the list of boards, and iterate through them with either tab or arrows - one currently focused-on has a darker background, as with hover. Can't focus on sections with tab (no accessbility support for it). To select, can click enter or space; to collapse the dropdown entirely, escape (can't go back to the previous dropdown). Can't select specific text, but can select all via Command+A. </td>
                 <td>Using tab, can navigate into the list of calendars, and iterate through them with with keyboard arrows (not tab). Once focused on, an element gains a bold blue border. To select, can click space or enter. Learning curve - in contrast to most web apps, once a list of calendars is opened, it's not clear that a 'focus' option is available, since 'tab' closes the list rather than focus on one of its calendars. Can't select specific text; only all on the page. </td>
             </tr>
@@ -73,9 +73,41 @@
       </div>
       </section>
       
-      <section id="solution">
-          <h2>The Solution</h2>
-          <p>[Details of accessible components implemented]</p>
+      <section id="output">
+          <h2><i>OUTPUT</i></h2>
+          <div id="table-wrapper">
+            <table>
+              <tr>
+                  <th></th>
+                  <th><i>FARFETCH</i></th>
+                  <th><i>PINTEREST</i></th>
+                  <th><i>GOOGLE CALENDAR</i></th>
+              </tr>
+              <tr>
+                  <td>Color/Style</td>
+                  <td>All names of the menu have the same color by default, and the background color of the menu matches that of the site (making it indistinguishable from static components). Hovering over a menu item, the names of other elements become lighter and a dropdown menu expands. Hovering over any of the elements within the dropdown underlines their name; clicking instantaneously redirects to the appropriate page of that item. Once redirected, which item has been chosen is indistinguishable (all text in the menu has then the same color). On mobile, pressing on an element of the menu darkens its background, and selecting it darkens the item's symbol, redirecting to the submenu of that element. Upon clicking into 'brands A-Z', the list of brands is presented, and once a brand is selected, a checkmark appears on its far right (the brand also appears on the top of the list, with an x mark on its right which allows for efficient removal of a selection).
+                  <td>Clicking on the ‘choose a board’ section opens up a dropdown menu with user’s boards with their icons on their left. The one currently selected doesn't differ from the others in color or text style. Hovering over a board/section darkens its background; selecting collapses the dropdown. On mobile, long-pressing on the board selection option doesn't darken in, nor the background of the board in the list of boards. The one previously selected doesn't differ from the others either, which makes it confusing and inefficient, as it requires memorizing the initial board selection. 
+                  <td>Hovering over the calendar dropdown button darkens its background, and a list of calendars expands. The arrow on the right of the dropdown button changes color into light blue (learnable - clear indication that a component has expanded, and can be collapsed). The currently selected calendar, or one thats hovered-over, has a darker background. Once a calendar is selected, the dropdown collapses, and the arrow of the calendar dropdown button remains blue (as if it's focused on), but is turned down. On mobile, color of the calendar is displayed on the left of the dropdown button, and on the right of each calendar once a list of them is expanded, which is efficient, as it doesn't require reading their names once a user memorizes the color codes of their calendars. Also, the currently selected calendar has a checkmark on the left of its name, which is learnable and memorable (but not present on the desktop).</td>
+              </tr>
+              <tr>
+                  <td>Text</td>
+                  <td>Once redirected, the header of the subpage changes into the name of the category clicked-on in the dropdown menu - learnable for first-time users, as they aren't required to understand the structure of url links to know what they've selected. No changes within the dropdown on redirect. On mobile, selecting a menu item expands a dropdown specific to that item, with the item's name visible on the top (learnable; great for first-time users to know what theyve pressed into). Pressing on 'brands A-Z' displays a new page with a list of all the brands, but the general page's name (in this case, 'brands' rather than 'brands A-Z') remains on the top. After clicking on any of the brands, the company appears listed on the top of the list, and a new button appears on the bottom to confirm selection. If x are selected, the button will display 'shop x brands', and a 'clear' button on the top right will appear to clear the selection. If too many are selected to display on the top, 'show more' appears under the selection. Once clicked, the list of selected brands expands, and that button changes into 'show less', with an arrow symbol turned up.</td>
+                  <td>Text above the board selection button clearly defines what the dropdown button is for (states 'board' on web, 'pick a board' on mobile.), which is learnable. Then, once the dropdown list expands, 'save to' text appears on the top, which also indicates to the user what pin property they're editing. Upon clicking on a board with sections, the text changes to 'choose section' on mobile and web. Once a board is selected, the text of the board dropdown button updates to display it.</td>
+                  <td>The calendar dropdown button doesn't have any text indicating that clicking on it allows to change the calendar; only an arrow symbol implying an expandable component. By default, the button displays the name of the currently chosen one, and doesn't change on hover. Once the list of calendar is expanded, the arrow turns up. On mobile, the button displays the calendar currently selected for the event, and updates to reflect the new calendar selected if a change is made. Interestingly, only on mobile it's possible to see what email the calendars are associated with, as indicated by text on top of the list of calendars.</tr>
+              <tr>
+                  <td>Focus Order (Web)</td>
+                  <td>Using tab, I can only focus on the first element of the menu ('new in'); clicking it once again moves over to the search bar located on the far right. To select an item, I can use return or space - it's impossible to navigate directly to that subpage, as selecting any item from the menu expands the corresponding dropdown. To iterate through the dropdown, must either click 'tab' once again, or use keyboard arrows; using tab allows to step into a second row of the dropdown lists, using arrows doesn't (will move to another item in the general menu instead). This poses an issue for inexperienced or visually impaired users, as it requires using numerous different keyboard shortcuts to perform an action that can be traditionally done with just one (which also makes it highly inefficient). There's also no explanation provided on the site, so most of the shortcuts must be learned via trial and error.</td>
+                  <td>Using tab allows to focus on the 'board' property of a pin, and return/space expands the dropdown list of all boards/sections. User can then iterate through them with tab or arrows, and select one with return/space - this focus order is efficient and easy to understand, as it doesn't require any additional shortcuts and is a common implementation on most sites. One problem, however, is posed by the search button within the list of board, as once focused-on with tab, can't move down with an arrow (it'll instead go through recent searches within the search button, which aren't displayed beforehand and might be confusing to the user). To focus out of it, a user must use 'tab', and then either 'tab' again or arrows to go through the list of calendars.</td>
+                  <td>Once focused-on via tab on the calendar dropdown button, I can use up/down arrows to move between different calendars, and use the return key or space to select one. However, using 'tab' inside the list, focus moves onto another property of the calendar. I believe this output is fairly understandable - although it requires using multiple keyboard shortcuts to perform a task, it's cohesive between different calendar properties (i.e., switching between the busy/free option can also only be performed with arrows rather than tab).</td>             
+              </tr>
+              <tr>
+                <td>Screen Reader (Web)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+          </table>
+        </div>
       </section>
       
       <section id="impact">

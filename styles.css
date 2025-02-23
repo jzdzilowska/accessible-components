@@ -68,10 +68,11 @@ main {
   padding-left: 220px;
 }
 
-.vl {
+#rectangle {
   position: fixed; 
-  border-left: 1px solid rgb(0, 0, 0);
-  margin-left: 160px;
+  border-right: 1px solid rgb(0, 0, 0);
+  width:160px; 
+  background-color: white;
   margin-top:-20px;
   height: 100vh; 
   z-index: 100;
@@ -82,14 +83,13 @@ section {
   margin: 0px;
   width: 100%; 
   padding-left: 160px;
-  margin-bottom: 20px; 
+  margin-bottom: 30px; 
   margin-top:20px;
 
 }
 
 section h2 {
   font-size: 40px; 
-  font-style: italic; 
   margin: 0; 
   margin-left:-120px;
   margin-block: 0;
@@ -146,9 +146,15 @@ table {
   justify-content: center;
 }
 th, td {
+  max-width: 400px;
+  height: auto; 
   border: 0.5px solid black;
   padding: 8px;
   text-align: left;
+}
+
+th.header {
+  background-color: #290f0f;
 }
 th {
   background-color: #f2f2f2;
