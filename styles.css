@@ -2,8 +2,27 @@
 body {
   font-family: Instrument Sans, sans-serif;
   margin: 0;
-  padding: 0;
-  text-align:right;
+  text-align: center;
+}
+
+body h1 {
+  padding-top:10px; 
+}
+
+.header {
+  position: relative; 
+  padding-left:160px;
+  height: auto;
+  margin: 0px;
+  margin-top:20px;
+  z-index: 1; 
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 440;
+  font-style: normal;
+  font-size: 100px; 
+  display: block; 
+  line-height: 100px;
+  letter-spacing: -3px;
 }
 
 /* ------------------------------- Sidebar ------------------------------------------ */
@@ -15,6 +34,7 @@ body {
   display: flex; /* affects only elts inside */
   flex-direction: column; /* Ensure the list items stack vertically */
   align-items: flex-end;
+  margin-top:-20px;
 }
 
 .sidebar ul {
@@ -41,64 +61,58 @@ main {
   flex-direction: column;
 }
 
+.info {
+  text-align: justify;
+  text-align-last: center;
+  width: 1150px;
+  padding-left: 220px;
+}
+
 .vl {
   position: fixed; 
   border-left: 1px solid rgb(0, 0, 0);
   margin-left: 160px;
+  margin-top:-20px;
   height: 100vh; 
-}
-
-
-.header {
-  position: relative; 
-  width: 98%;
-  height: auto;
-  margin: 0px;
-  z-index: 1; 
-  font-family: "Instrument Sans", sans-serif;
-  font-weight: 440;
-  font-style: normal;
-  font-size: 100px; 
-  display: block; 
-  line-height: 100px;
-  letter-spacing: -3px;
-  padding: 10px; 
+  z-index: 100;
 }
 
 section {
-  width: 85vw; 
-  margin-left: 200px;
+  position: relative;
+  margin: 0px;
+  width: 100%; 
+  padding-left: 160px;
   margin-bottom: 20px; 
+  margin-top:20px;
+
 }
 
 section h2 {
-  font-size: 50px; 
+  font-size: 40px; 
   font-style: italic; 
   margin: 0; 
+  margin-left:-120px;
   margin-block: 0;
   font-weight: 440;
-  line-height: 100px;
   letter-spacing: -3px;
   text-align: center;
 }
 
-.info {
-  text-align: justify;
-  text-align-last: right;
-  width: 79%; 
-  margin-right:30px;
-  margin-left: auto;
+section p {
+  margin-left:-120px;
 }
-
 .input-all {
+  background-color: #f4f4f4;
   display:flex;
   flex-direction: row; 
   justify-content: left;
-  align-items: center;
+  align-items: left;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 80px;
   margin-bottom: 50px;
+  z-index: 1;
+  padding-right:100px;
 }
 
 .input-imgs {
@@ -123,10 +137,13 @@ footer {
 /* ------------------------------- Table ------------------------------------------ */
 
 table {
+  position: relative;
   margin-top: 10px;
+  margin-left: 40px; 
   border-collapse: collapse;
-  width: 100%;
+  max-width: 1200px;
   background-color: white;
+  justify-content: center;
 }
 th, td {
   border: 0.5px solid black;
