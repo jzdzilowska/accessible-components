@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="rectangle"></div>
-  <h1 class="header">Dropdown Menus:<br>An Accessibility Evaluation</h1>
+  <h1 class="header" style="margin-left:160px;">Dropdown Menus:<br>An Accessibility Evaluation</h1>
     <nav class = "sidebar">
         <ul>
             <li><a href="#input">1</a></li>
@@ -25,19 +25,19 @@
           <p>The case study below focuses on the accessibility of dropdown menus, aiming to improve them for all users, including those using keyboard, mouse, touchscreen, or screen readers. By evaluating - and potentially reworking - current implementations for better, the goal is to enhance usability & accessiblity without sacrificing function.</p>
       </div>
       <section id="input">
-          <h2><i>INPUT</i></h2>
+          <h2><i>1. INPUT</i></h2>
           <div class="input-all"> 
           <div class="input-imgs">
-            <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse" style="margin-left: 40px;">
-            <img src="images/far_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app" style="margin-left: 40px;">
+            <img src="images/far_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse" style="margin-left:30px;">
+            <img src="images/far_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app" style="margin-left:30px;">
           </div>
           <div class="input-imgs">
             <img src="images/pin_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse">
             <img src="images/pin_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app">
           </div>          
           <div class="input-imgs">
-            <img src="images/cal_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse" style="margin-top: 10px;">
-            <img src="images/cal_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app" style="margin-bottom: 10px;">
+            <img src="images/cal_web.gif" alt="An animation showing the user navigating the Farfetch website with a mouse" style="margin-right:30px; margin-top:10px;">
+            <img src="images/cal_mobile.gif" alt="An animation showing the user navigating the Farfetch mobile app" style="margin-right:30px; margin-bottom:10px;">
           </div>
         </div>
         <div id="table-wrapper">
@@ -74,7 +74,7 @@
       </section>
       
       <section id="output">
-          <h2><i>OUTPUT</i></h2>
+          <h2><i>2 . OUTPUT</i></h2>
           <div id="table-wrapper">
             <table>
               <tr>
@@ -111,29 +111,37 @@
       </section>
       
       <section id="states">
-          <h2>STATE MODELS</h2>
+          <h2>3. STATE MODELS</h2>
           <h4>Flowcharts below present the state models of Pinterest's dropdown for board selection, as I found myself utilizing it the most out of the 3 components introduced above. I focused on improving both clarity and efficiency of the element, by providing an easy-to-navigate layout that makes it quicker to switch between sections, and distinguish between selected, hovered, and unselected states</h4>
           <div class="states-all">
             <div class="states-original">
             <h3>Original</h3>
+            <p><b>Mouse User</b></p>
             <img src="images/pin_mouse.png" alt="A diagram showing mouse user's interactions with Pinterest's board selection dropdown menu">
+            <p><b>Keyboard User</b></p>
             <img src="images/pin_key.png" alt="A diagram showing keyboard user's interactions with Pinterest's board selection dropdown menu">
-            <p><b>Issues:</b> test</p>
+            <p><b>Problems:</b><br>No clear visual distinction between selected and unselected states — only hover changes the background to grey, otherwise all boards have the same color (can't easily recognize the previously selected board/section).<br>
+              Harder to track the currently selected board, and switch into another one upon choosing a board with sections - doing so requires going back into the board menu; more clicks.<br>
+              Ambiguity for screen reader users due to lack of clear feedback on selection state; accessibility issues, as it's impossible to navigate through sections via tab.</p>
             </div>
             <div class="states-original">
             <h3>Revised</h3>
-            <img src="images/redesign_mouse.png" alt="A diagram showing the state models of dropdown menus on Farfetch, Pinterest, and Google Calendar" style="margin-top:-35px">
-            <img src="images/redesign_key.png" alt="A diagram showing the state models of dropdown menus on Farfetch, Pinterest, and Google Calendar">
-            <p>test</p>
+            <p><b>Mouse User</b></p>
+            <img src="images/redesign_mouse.png" alt="A diagram showing mouse user's interactions with Pinterest's REDESIGNED board selection dropdown menu" style="margin-top:-50px;">
+            <p><b>Keyboard User</b></p>
+            <img src="images/redesign_key.png" alt="A diagram showing keyboard user's interactions with Pinterest's REDESIGNED board selection dropdown menu">
+            <p><b>Improvements:</b><br>Learnability: Clearer visual cues make it easier for new users to understand the interface: previously selected board is now highlighted with a light gray background, and background of hovered-over board/section is medium gray. The section list opens now to the right of the board list, making it easier for new users to understand where they've clicked into.<br>
+              Memorability: Consistent background colors reinforce navigation patterns. The side-by-side list layout makes it easier to remember navigation flow and where things are.<br>
+              Efficiency: Keyboard users can now navigate through sections with tab and up/down arrows, and open/close boards' sections with right/left arrows, which quickens the process for knowledgeable users, and doesn't impede it for new ones.<br>
+              Accessibility: Stronger visual contrast improves usability for users with screen readers or visual impairments. Screen reader users can easily distinguish between selected and unselected states within the section list (previously impossible to focus on section), navigate through sections with tab, and benefit from less menu switching (reduces cognitive load).<br></p>
           </div>
           </div>
-          <p>[Results and improvements]</p>
-      </section>
+          <h2>4. COMPONENT REDESIGN</h2>
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 10px" width="900" height="450" src="https://embed.figma.com/design/EGfjC7WAUvWc1lAQ2wReQO/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+          <p>Pinterest's edesigned board and section selection dropdown embedded above (otherwise, access <a href="https://www.figma.com/design/EGfjC7WAUvWc1lAQ2wReQO/Pinterest-Board-Dropdown-Redesign?node-id=0-1&t=lOlgjueJEDGqFipS-1">here</a>). The new layout is more intuitive, with a clear visual distinction between selected and unselected states, and a more efficient navigation flow. The section list now opens to the right of the board list, making it easier for users to understand which board they've chosen. It also increases efficiency of switching into a different board (or displaying its sections), as it only requires clickin on it within the left list, instead of navigating back to the all-boards list. Previously chosen board has now a light grey background, and a hovered-over board/section has a medium gray background, improving learnability (no need to remember the previous selection). Keyboard users can now navigate through sections with up/down arrows, open/close sections with right/left arrows, or progress beyond the chosen board's sections into those of the subsequent board in the main list with tab. and open/close boards' sections with right/left arrows. In terms of accessibility, the redesign provides stronger visual contrast, making it easier for users with screen readers or visual impairments to navigate through the dropdown.</p>
+        </section>
       
       <section id="redesign">
-          <h2>COMPONENT REDESIGN</h2>
-          <iframe style="margin-left:-100px; border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="450" src="https://embed.figma.com/design/EGfjC7WAUvWc1lAQ2wReQO/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-          <p>[Final thoughts]</p>
       </section>
   
   <footer>
