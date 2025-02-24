@@ -89,18 +89,32 @@ section {
 }
 
 section h2 {
+  font-style: italic;
   font-size: 40px; 
   margin: 0; 
-  margin-left:-120px;
+  margin-left:-130px;
   margin-block: 0;
   font-weight: 440;
   letter-spacing: -3px;
   text-align: center;
 }
 
-section p {
+section h3 {
+  font-style: italic;
+  font-size: 30px; 
   margin-left:-120px;
+  font-weight: 440;
+  letter-spacing: -3px;
+  text-align: center;
 }
+
+section h4 {
+  margin-left:130px;
+  max-width: 1000px; 
+  font-weight: 300;
+}
+
+
 .input-all {
   background-color: #f4f4f4;
   display:flex;
@@ -130,8 +144,32 @@ section p {
   height: auto;
 }
 
+.states-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  margin-top: 25px;
+  margin-left:-120px; 
+}
+
+.states-all img {
+  width: 620px;
+  height: auto;
+}
+
+.states-original {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
 footer {
   text-align: center;
+  margin-left: 160px;
 }
 
 /* ------------------------------- Table ------------------------------------------ */

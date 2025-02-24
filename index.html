@@ -16,8 +16,8 @@
         <ul>
             <li><a href="#input">1</a></li>
             <li><a href="#output">2</a></li>
-            <li><a href="#impact">3</a></li>
-            <li><a href="#conclusion">4</a></li>
+            <li><a href="#states">3</a></li>
+            <li><a href="#redesign">4</a></li>
         </ul>
     </nav>    
   <main>
@@ -53,14 +53,14 @@
                 <td>Clicking on any of its elements leads to a subpage specific to that element, and closes the dropdown; which item has been chosen is indistinguishable once redirected (all text in the menu has the same color). Hovering on any of its elements instead lightens up the names of the other items, and expands a submenu specific to the hovered-over item. Moving the mouse away collapses the dropdown menu. Hovering over an element within the submenu underlines its name; clicking leads to an associated page. 
                   Can select and copy any text (both in the navbar and in the collapsed dropdown).
                   Learnable: hovering over a category opens the dropdown, clicking an item closes the menu & navigates to a new page (intuitive & easy to pick up). Memorable: consistent layout & visual feedback (underlines in the dropdown on hover; darker color of the navbar item once chosen). Efficient: hovering, can quickly preview & select options without extra clicks.</td>
-                <td>Clicking on the ‘choose a board’ section opens up a dropdown menu with user’s boards. Learnable: those with sections have a side arrow on their far right, and a hovered-over board will have a gray background with its name displayed as a popup. Efficient: can look up a board with the search bar (scrolling possible, but takes time with many boards). Memorable: all lists are alphabetical, and the layout of the menu remains the same (search on top, then boards). Clicking directly on a board without subsections selects it and collapses the menu. Clicking on a board with sections opens a secondary list of sections. Clicking on a section selects it and closes the dropdown.
+                <td>Clicking on the ‘choose a board’ section opens up a dropdown list with user’s boards. By default, upon expanding the dropdown list, the focus is on the search bar on top of it. Learnable: those with sections have a side arrow on their far right, and a hovered-over board will have a gray background with its name displayed as a popup. Efficient: can look up a board with the search bar (scrolling possible, but takes time with many boards). Memorable: all lists are alphabetical, and the layout of the menu remains the same (search on top, then boards). Clicking directly on a board without subsections selects it and collapses the menu. Clicking on a board with sections opens a secondary list of sections, and displays a left-pointing arrow to close that board's section list and display all boards instead. Clicking on a section selects it and closes the dropdown.
                   Can select any text, but on mouse release, it'll treat that selection as a click into the board/section and select it.</td>
                 <td>Clicking on the calendar section (one chosen so far is displayed by default) expands a dropdown with a list of user's calendars (learning curve - there's no accompanying text indicating that this is a 'choose a calendar' section, aside from the arrow on the far right, which implies that there's an expandable component available for that element). The calendar currently selected has a darkened background and a checkmark on the left of its name (learnable and memorable - intuitive usage, clear from the beginning which one was chosen previously; the scroll bar visible on the right reminds that other calendars might be available. Also, a small arrow in the 'choose a calendar' section implies that it's possible to expand a list, which is efficient for experienced users). Can scroll; in hover, the background of the calendar's list row darkens (even if hovered over the previously-chosen one with already darker background than others). Upon hovering outside of the dropdown, it remains visible; collapses only upon an out-of-bound click. Once selected via click, the dropdown collapses (efficient: no need to confirm selection). Can select text, but on mouse release, that calendar will be selected.</td>
             </tr>
             <tr>
                 <td>Keyboard</td>
                 <td>Limited support. Using tab, can navigate into the menu, but can't focus on any option other than "new in" (moves to the far-right search bar on second 'tab' press). To open the dropdown (works only for "new in"), must press 'enter' or 'space'; to close, 'escape'. Learnable: can move through the list with keyboard arrows or via 'tab'. Can't choose a general item (f.e., 'new in') & navigate to its page right away - enter will only open the dropdown menu, from which one must choose a subcategory (can select via enter, move via tab). Can select categories other than 'new in' by moving left/right through the menu with keyboard arrows. Can't select specific text, only all (command+a). Can't navigate back to the main page without using the browser's back button.</td>
-                <td>Using tab, can navigate into the list of boards, and iterate through them with either tab or arrows - one currently focused-on has a darker background, as with hover. Can't focus on sections with tab (no accessbility support for it). To select, can click enter or space; to collapse the dropdown entirely, escape (can't go back to the previous dropdown). Can't select specific text, but can select all via Command+A. </td>
+                <td>Using tab, can navigate into the list of boards, and iterate through them with either tab or arrows - one currently focused-on has a darker background, as with hover. Can't focus on sections with tab (no accessbility support for it); once a board with sections is chosen, can go back using escape. To select, can click enter or space; to collapse the dropdown entirely, escape (can't go back to the previous dropdown). Can't select specific text, but can select all via Command+A. </td>
                 <td>Using tab, can navigate into the list of calendars, and iterate through them with with keyboard arrows (not tab). Once focused on, an element gains a bold blue border. To select, can click space or enter. Learning curve - in contrast to most web apps, once a list of calendars is opened, it's not clear that a 'focus' option is available, since 'tab' closes the list rather than focus on one of its calendars. Can't select specific text; only all on the page. </td>
             </tr>
             <tr>
@@ -86,7 +86,7 @@
               <tr>
                   <td>Color/Style</td>
                   <td>All names of the menu have the same color by default, and the background color of the menu matches that of the site (making it indistinguishable from static components). Hovering over a menu item, the names of other elements become lighter and a dropdown menu expands. Hovering over any of the elements within the dropdown underlines their name; clicking instantaneously redirects to the appropriate page of that item. Once redirected, which item has been chosen is indistinguishable (all text in the menu has then the same color). On mobile, pressing on an element of the menu darkens its background, and selecting it darkens the item's symbol, redirecting to the submenu of that element. Upon clicking into 'brands A-Z', the list of brands is presented, and once a brand is selected, a checkmark appears on its far right (the brand also appears on the top of the list, with an x mark on its right which allows for efficient removal of a selection).
-                  <td>Clicking on the ‘choose a board’ section opens up a dropdown menu with user’s boards with their icons on their left. The one currently selected doesn't differ from the others in color or text style. Hovering over a board/section darkens its background; selecting collapses the dropdown. On mobile, long-pressing on the board selection option doesn't darken in, nor the background of the board in the list of boards. The one previously selected doesn't differ from the others either, which makes it confusing and inefficient, as it requires memorizing the initial board selection. 
+                  <td>Clicking on the ‘choose a board’ section opens up a dropdown menu with user’s boards with their icons on their left. What's confusing is that the arrow on the button points down regardless of whether the list has been expanded or not. The calendar currently selected doesn't differ from the others in color or text style. Hovering over a board/section darkens its background; selecting collapses the dropdown. On mobile, long-pressing on the board selection option doesn't darken in, nor the background of the board in the list of boards. The one previously selected doesn't differ from the others either, which makes it confusing and inefficient, as it requires memorizing the initial board selection. 
                   <td>Hovering over the calendar dropdown button darkens its background, and a list of calendars expands. The arrow on the right of the dropdown button changes color into light blue (learnable - clear indication that a component has expanded, and can be collapsed). The currently selected calendar, or one thats hovered-over, has a darker background. Once a calendar is selected, the dropdown collapses, and the arrow of the calendar dropdown button remains blue (as if it's focused on), but is turned down. On mobile, color of the calendar is displayed on the left of the dropdown button, and on the right of each calendar once a list of them is expanded, which is efficient, as it doesn't require reading their names once a user memorizes the color codes of their calendars. Also, the currently selected calendar has a checkmark on the left of its name, which is learnable and memorable (but not present on the desktop).</td>
               </tr>
               <tr>
@@ -110,13 +110,29 @@
         </div>
       </section>
       
-      <section id="impact">
-          <h2>Impact</h2>
+      <section id="states">
+          <h2>STATE MODELS</h2>
+          <h4>Flowcharts below present the state models of Pinterest's dropdown for board selection, as I found myself utilizing it the most out of the 3 components introduced above. I focused on improving both clarity and efficiency of the element, by providing an easy-to-navigate layout that makes it quicker to switch between sections, and distinguish between selected, hovered, and unselected states</h4>
+          <div class="states-all">
+            <div class="states-original">
+            <h3>Original</h3>
+            <img src="images/pin_mouse.png" alt="A diagram showing mouse user's interactions with Pinterest's board selection dropdown menu">
+            <img src="images/pin_key.png" alt="A diagram showing keyboard user's interactions with Pinterest's board selection dropdown menu">
+            <p><b>Issues:</b> test</p>
+            </div>
+            <div class="states-original">
+            <h3>Revised</h3>
+            <img src="images/redesign_mouse.png" alt="A diagram showing the state models of dropdown menus on Farfetch, Pinterest, and Google Calendar" style="margin-top:-35px">
+            <img src="images/redesign_key.png" alt="A diagram showing the state models of dropdown menus on Farfetch, Pinterest, and Google Calendar">
+            <p>test</p>
+          </div>
+          </div>
           <p>[Results and improvements]</p>
       </section>
       
-      <section id="conclusion">
-          <h2>Conclusion</h2>
+      <section id="redesign">
+          <h2>COMPONENT REDESIGN</h2>
+          <iframe style="margin-left:-100px; border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="450" src="https://embed.figma.com/design/EGfjC7WAUvWc1lAQ2wReQO/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
           <p>[Final thoughts]</p>
       </section>
   
